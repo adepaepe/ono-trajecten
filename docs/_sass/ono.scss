@@ -1,0 +1,270 @@
+$card-radius: #44C8F5;
+$board-background-color: #ffffff;
+
+.ono-board {
+  position: relative;
+  width: 100%;
+  height: 29rem;
+  text-align: left;
+  background-color: $board-background-color;
+
+  .ono-carabiner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12rem;
+    height: calc(100% - 1rem);
+    background-color: #1166a9;
+    padding: 2rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    z-index: 2;
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      margin-top: -1.25rem;
+      content: '';
+      background-image: url('/assets/images/ono/ono.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-color: #1166a9;
+      width: 8rem;
+      height: 3rem;
+    }
+
+    &-body {
+      margin-top: 2.5rem;
+      color: #000000;
+      background-color: $board-background-color;
+      padding: 1rem;
+      border-radius: 8px;
+      height: calc(100% - 2.5rem);
+    }
+  }
+
+  ul.ono-track-labels {
+    position: absolute;
+    top: 1.7rem;
+    left: -1.5rem;
+    padding-left: 12rem;
+    list-style-type: none;
+    z-index: 2;
+    pointer-events: none;
+
+    li {
+      color: #ffffff;
+      background-color: #1166a9;
+      font-weight: bold;
+      text-align: center;
+      padding: .5rem 1rem;
+      border-radius: 4px;
+      transform-origin: 0 0;
+      transform: rotate(-90deg);
+      margin-top: 6.5rem;
+    }
+  }
+
+  .ono-tracks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    hr {
+      position: absolute;
+      max-width: 100%;
+      width: 100%;
+      border: 0;
+      border-top: dashed 4px rgba(0,0,0,.1);
+
+      &:first-of-type {
+        margin-top: calc(9.5rem - 2px);
+      }
+
+      &:last-of-type {
+        margin-top: calc(18.5rem - 2px);
+      }
+    }
+  }
+
+  ul.ono-cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+    padding-left: 14rem;
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    li {
+      flex-shrink: 0;
+      margin-right: 1rem;
+
+      &.auto-open {
+        margin-top: 0rem;
+      }
+
+      &.auto-limited {
+        margin-top: 9rem;
+      }
+
+      &.auto-closed {
+        margin-top: 18rem;
+      }
+
+      &.card-attached {
+        margin-left: -1rem;
+      }
+    }
+  }
+}
+
+.ono-board ul.ono-cards li,
+.ono-card {
+  width: 8rem;
+  height: 8rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,.15);
+
+  &.card-answer {
+    background-image: url('/assets/images/ono/card-answer.jpg');
+  }
+
+  &.card-choose {
+    background-image: url('/assets/images/ono/card-choose.jpg');
+  }
+
+  &.card-conclude {
+    background-image: url('/assets/images/ono/card-conclude.jpg');
+  }
+
+  &.card-create {
+    background-image: url('/assets/images/ono/card-create.jpg');
+  }
+
+  &.card-define {
+    background-image: url('/assets/images/ono/card-define.jpg');
+  }
+
+  &.card-design-challenge {
+    background-image: url('/assets/images/ono/card-design-challenge.jpg');
+  }
+
+  &.card-design-question {
+    background-image: url('/assets/images/ono/card-design-question.jpg');
+  }
+
+  &.card-hypothesis {
+    background-image: url('/assets/images/ono/card-hypothesis.jpg');
+  }
+
+  &.card-idea {
+    background-image: url('/assets/images/ono/card-idea.jpg');
+  }
+
+  &.card-inform {
+    background-image: url('/assets/images/ono/card-inform.jpg');
+  }
+
+  &.card-invent {
+    background-image: url('/assets/images/ono/card-invent.jpg');
+  }
+
+  &.card-plan {
+    background-image: url('/assets/images/ono/card-plan.jpg');
+  }
+
+  &.card-prepare {
+    background-image: url('/assets/images/ono/card-prepare.jpg');
+  }
+
+  &.card-present {
+    background-image: url('/assets/images/ono/card-present.jpg');
+  }
+
+  &.card-product {
+    background-image: url('/assets/images/ono/card-product.jpg');
+  }
+
+  &.card-prototype {
+    background-image: url('/assets/images/ono/card-prototype.jpg');
+  }
+
+  &.card-reflect {
+    background-image: url('/assets/images/ono/card-reflect.jpg');
+  }
+
+  &.card-research-challenge {
+    background-image: url('/assets/images/ono/card-research-challenge.jpg');
+  }
+
+  &.card-research-question {
+    background-image: url('/assets/images/ono/card-research-question.jpg');
+  }
+
+  &.card-test {
+    background-image: url('/assets/images/ono/card-test.jpg');
+  }
+
+  a {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.ono-step-row {
+  padding-top: 1rem;
+}
+
+hr.ono-step-separator {
+  border-top: solid 1px rgba(0,0,0,.15);
+  margin: 0;
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+.ono-card-info {
+  font-size: 14px;
+  line-height: 24px;
+  margin: .5rem 0 0 .5rem;
+
+  & i.material-icons {
+    vertical-align: middle !important;
+  }
+}
+
+.ono-info-table {
+  & tr:first-of-type td {
+    border-top: none;
+  }
+
+  & td:first-of-type {
+    padding-left: 0;
+    font-weight: bold;
+    width: 8rem;
+  }
+  & td:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.ono-info-feedback {
+  line-height: 24px;
+  text-justify: inter-word;
+
+  & i.material-icons {
+    vertical-align: middle !important;
+  }
+}

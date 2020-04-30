@@ -1,0 +1,79 @@
+{% for card in page.ono.cards %}
+
+{% include ono-card-track-lookup.html %}
+{% include ono-card-operation-lookup.html %}
+
+<div class="row ono-step-row" id="step-{{ forloop.index }}">
+  <div class="col-lg-2">
+    <div class="ono-card card-{{ card.card }}"></div>
+    {% if card.additionalcard %}
+    <div class="ono-card card-{{ card.additionalcard }}"></div>
+    {% endif %}
+    <div class="ono-card-info">
+      <div><i class="material-icons">swap_vert</i> {{ track }}</div>
+      {% if card.time %} <div><i class="material-icons">timer</i> {{ card.time }}</div>{% endif %}
+      {% if card.groupform %} <div><i class="material-icons">people</i> {{ card.groupform }}</div>{% endif %}
+    </div>
+  </div>
+  <div class="col-lg-10">
+    <h4>{{ operation }}</h4>
+
+    <table class="table ono-info-table">
+      <tbody>
+        {% if card.technique %}
+        <tr>
+          <td>Techniek</td>
+          <td>{{ card.technique }}</td>
+        </tr>
+        {% endif %}
+
+        {% if card.media %}
+        <tr>
+          <td>Media</td>
+          <td>{{ card.media }}</td>
+        </tr>
+        {% endif %}
+
+        {% if card.who %}
+        <tr>
+          <td>Wie</td>
+          <td>{{ card.who }}</td>
+        </tr>
+        {% endif %}
+
+        {% if card.goal %}
+        <tr>
+          <td>Doelstelling</td>
+          <td>{{ card.goal }}</td>
+        </tr>
+        {% endif %}
+
+        {% if card.evaluationform %}
+        <tr>
+          <td>Evaluatievorm</td>
+          <td>{{ card.evaluationform }}</td>
+        </tr>
+        {% endif %}
+
+      </tbody>
+    </table>
+
+    {% if card.feedback %}
+    <div class="ono-info-feedback">
+      <h5>Feedback</h5>
+      {{ card.feedback | newline_to_br }}
+    </div>
+    {% endif %}
+
+    {% if card.image %}
+    <img src="/assets/images/{{ card.image }}" alt="image">
+    {% endif %}
+
+  </div>
+</div>
+
+{% if forloop.last == false %}
+<hr class="ono-step-separator">
+{% endif %}
+
+{% endfor %}

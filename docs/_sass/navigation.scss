@@ -1,0 +1,37 @@
+#navbar-pixel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 6rem;
+  left: 0;
+}
+
+.navbar.fixed-top {
+  background-color: rgba(34, 34, 34, .7);
+  border-bottom: rgba(255, 255, 255, .6) 1px solid;
+  transition: all .35s;
+  color: rgba(255, 255, 255, .7);
+}
+
+@media (min-width: 992px) {
+  .navbar.fixed-top {
+    background-color: rgba(34, 34, 34, .3);
+
+    &.solid {
+      background-color: #ffffff;
+      border-bottom: rgba(34, 34, 34, .2) 1px solid;
+  
+      .navbar-brand {
+        color: $primary-color;
+      }
+  
+      .nav-item > .nav-link {
+        color: #222222;
+      }
+
+      .nav-item > .nav-link.active {
+        color: $primary-color;
+      }
+    }
+  }
+}

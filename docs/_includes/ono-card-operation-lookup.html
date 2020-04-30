@@ -1,0 +1,92 @@
+{% capture operation %}
+{% case card.card %}
+  {% when "answer" %}
+    Antwoord
+  {% when "choose" %}
+    Kiezen
+  {% when "conclude" %}
+    Concluderen
+  {% when "create" %}
+    Maken
+  {% when "define" %}
+    Definiëren
+  {% when "design-challenge" %}
+    Ontwerpuitdaging
+  {% when "design-question" %}
+    Ontwerpvraag
+  {% when "hypothesis" %}
+    Hypothese
+  {% when "idea" %}
+    Idee
+  {% when "inform" %}
+    Informeren
+  {% when "invent" %}
+    Bedenken
+  {% when "plan" %}
+    Plan
+  {% when "prepare" %}
+    Voorbereiden
+  {% when "present" %}
+    Presenteren
+  {% when "product" %}
+    Product
+  {% when "prototype" %}
+    Prototype
+  {% when "reflect" %}
+    Reflecteren
+  {% when "research-challenge" %}
+    Onderzoeksuitdaging
+  {% when "research-question" %}
+    Onderzoeksvraag
+  {% when "test" %}
+    Testen
+{% endcase %}
+{% endcapture %}
+
+{% if card.additionalcard %}
+  {% capture operation %}
+  {{ operation }} /
+  {% case card.card %}
+    {% when "answer" %}
+      Antwoord
+    {% when "choose" %}
+      Kiezen
+    {% when "conclude" %}
+      Concluderen
+    {% when "create" %}
+      Maken
+    {% when "define" %}
+      Definiëren
+    {% when "design-challenge" %}
+      Ontwerpuitdaging
+    {% when "design-question" %}
+      Ontwerpvraag
+    {% when "hypothesis" %}
+      Hypothese
+    {% when "idea" %}
+      Idee
+    {% when "inform" %}
+      Informeren
+    {% when "invent" %}
+      Bedenken
+    {% when "plan" %}
+      Plan
+    {% when "prepare" %}
+      Voorbereiden
+    {% when "present" %}
+      Presenteren
+    {% when "product" %}
+      Product
+    {% when "prototype" %}
+      Prototype
+    {% when "reflect" %}
+      Reflecteren
+    {% when "research-challenge" %}
+      Onderzoeksuitdaging
+    {% when "research-question" %}
+      Onderzoeksvraag
+    {% when "test" %}
+      Testen
+  {% endcase %}
+  {% endcapture %}
+{% endif %}

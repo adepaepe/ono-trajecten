@@ -1,0 +1,10 @@
+{% capture track %}
+{% case card.track %}
+  {% when "open" %}
+    Open
+  {% when "limited" %}
+    Begrensd
+  {% when "closed" %}
+    Gesloten
+{% endcase %}
+{% endcapture %}

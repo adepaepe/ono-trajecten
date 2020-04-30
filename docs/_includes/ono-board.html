@@ -1,0 +1,28 @@
+<div class="ono-board">
+  <div class="ono-carabiner">
+    <div class="ono-carabiner-body">
+      <h5>{{ page.ono.project }}</h5>
+      <p>{{ page.ono.goal }}</p>
+    </div>
+  </div>
+
+  <ul class="ono-track-labels">
+    <li>open</li>
+    <li>begrensd</li>
+    <li>gesloten</li>
+  </ul>
+
+  <div class="ono-tracks">
+    <hr>
+    <hr>
+  </div>
+
+  <ul class="ono-cards">
+    {% for card in page.ono.cards %}
+    <li class="card-{{ card.card }} auto-{{ card.track }}"><a href="#step-{{ forloop.index }}" class="page-scroll"></a></li>
+    {% if card.additionalcard %}
+    <li class="card-{{ card.additionalcard }} auto-{{ card.track }} card-attached"></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

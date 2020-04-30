@@ -1,0 +1,107 @@
+$primary-color: rgb(37, 172, 218);
+$primary-color-dark: rgb(0, 142, 188);
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  color: #333333;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  color: #ffffff;
+
+  &.home {
+    text-align: center;
+    background-image: url('/assets/images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+
+    padding: 10rem 0 10rem 0;
+
+    .header-content {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      .btn-primary {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+section {
+  padding: 5rem 0;
+}
+
+hr {
+  max-width: 3.125rem;
+  border-color: $primary-color;
+  border-width: 3px;
+  margin-bottom: 3rem;
+}
+
+section.alternate {
+  background-color: #f0f0f0;
+}
+
+@media (min-width: 768px) {
+  header.full-screen {
+    min-height: 100vh;
+  }
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+footer {
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.card-group > .card {
+  margin-bottom: 1.5rem!important;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color-dark;
+    border-color: $primary-color-dark;
+  }
+}
+
+#aanpak {
+  ul > li {
+    margin-bottom: .5rem;
+  }
+}
