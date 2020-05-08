@@ -46,7 +46,7 @@
 {% if card.additionalcard %}
   {% capture operation %}
   {{ operation }} /
-  {% case card.card %}
+  {% case card.additionalcard %}
     {% when "answer" %}
       Antwoord
     {% when "choose" %}
