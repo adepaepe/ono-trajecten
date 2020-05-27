@@ -3,6 +3,15 @@
 {% include ono-card-track-lookup.html %}
 {% include ono-card-operation-lookup.html %}
 
+{% if card.stage and card.stage != previousStage %}
+  {% assign previousStage = card.stage %}
+  {% assign stage = page.ono.stages | where:"id",card.stage | first %}
+<div class="row ono-stage-row">
+  <h3>Fase {{ stage.id }}: {{ stage.title }}</h3>
+  <span>{{ stage.description }}</span>
+</div>
+{% endif %}
+
 <div class="row ono-step-row" id="step-{{ forloop.index }}">
   <div class="col-lg-2">
     <div class="ono-card card-{{ card.card }}"></div>
