@@ -2,6 +2,9 @@ collections:
   trajecten:
     output: true
     sort_by: name
+  cases:
+    output: true
+    sort_by: name
 
 sass:
   sass_dir: ./_sass

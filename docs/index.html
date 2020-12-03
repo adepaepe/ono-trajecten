@@ -2,23 +2,30 @@
 layout: default
 title: Home
 navigation:
- - id: about
-   title: Over
- - id: projecten
-   title: Projecten
- - id: workshops
-   title: Workshops & opleidingen
- - id: contact
-   title: Contact
+  - id: about
+    title: Over
+  - id: projecten
+    title: Projecten
+  - id: cases
+    title: Cases
+  - id: vervolgonderzoek
+    title: ONO digitaal
+  - id: workshops
+    title: Workshops & opleidingen
+  - id: contact
+    title: Contact
 ---
+
 <header id="home" class="home">
   <div class="header-content">
     <div class="header-content-inner">
       <h1>ONO</h1>
-      <hr>
+      <hr />
       <p>kort voor 'onderzoek & ontwerp'</p>
       <p>
-        <a class="btn btn-primary btn-xl page-scroll" href="#about">Meer weten</a>
+        <a class="btn btn-primary btn-xl page-scroll" href="#about"
+          >Meer weten</a
+        >
       </p>
     </div>
   </div>
@@ -29,7 +36,25 @@ navigation:
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
         <h2>Over</h2>
-        <p class="lead">ONO, kort voor ‘Onderzoek en Ontwerp’, is een tool ontwikkeld binnen een onderzoeksproject van het Industrial Design Center én de lerarenopleiding van de Howest. ONO helpt (leerkrachten)teams om op een eenvoudige manier projecten te bedenken, organiseren en faciliteren op maat van de jongeren. <br> <br>Om een krachtige leeromgeving te creëren werk je best samen met een interdisciplinair team. Zo heb je een beter zicht op de kennis en vaardigheden waarover de leerlingen reeds beschikken en kan je makkelijker verbanden leggen tussen de verschillende disciplines. Dit gedeeld ownerschip bij het bedenken en voorbereiden van projecten resulteert tot unieke, didactisch goed onderbouwde projecten waarbij de jongeren gestimuleerd worden om kritisch, probleemoplossend en out-of-the-box te denken. Alleen is een interdisciplinaire samenwerking niet altijd evident! ONO ondersteunt het team jouw om op een efficiënte manier te communiceren, constructief te discussiëren, beslissingen te nemen en (deel)opdrachten te verdelen tijdens het uitwerken of aanpassen van projecten.</p>
+        <p class="lead">
+          ONO, kort voor ‘Onderzoek en Ontwerp’, is een tool ontwikkeld binnen
+          een onderzoeksproject van het Industrial Design Center én de
+          lerarenopleiding van de Howest. ONO helpt (leerkrachten)teams om op
+          een eenvoudige manier projecten te bedenken, organiseren en
+          faciliteren op maat van de jongeren. <br />
+          <br />Om een krachtige leeromgeving te creëren werk je best samen met
+          een interdisciplinair team. Zo heb je een beter zicht op de kennis en
+          vaardigheden waarover de leerlingen reeds beschikken en kan je
+          makkelijker verbanden leggen tussen de verschillende disciplines. Dit
+          gedeeld ownerschip bij het bedenken en voorbereiden van projecten
+          resulteert tot unieke, didactisch goed onderbouwde projecten waarbij
+          de jongeren gestimuleerd worden om kritisch, probleemoplossend en
+          out-of-the-box te denken. Alleen is een interdisciplinaire
+          samenwerking niet altijd evident! ONO ondersteunt het team jouw om op
+          een efficiënte manier te communiceren, constructief te discussiëren,
+          beslissingen te nemen en (deel)opdrachten te verdelen tijdens het
+          uitwerken of aanpassen van projecten.
+        </p>
       </div>
     </div>
   </div>
@@ -40,22 +65,71 @@ navigation:
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
         <h2>Projecten</h2>
-        <hr>
+        <hr />
       </div>
     </div>
     <div class="row">
       {% for traject in site.trajecten %}
       <div class="col-sm-4 card-group">
         <div class="card traject-card shadow">
-          <img class="card-img-top" src="/assets/images/{{ traject.tile }}" alt="Traject image">
+          <img
+            class="card-img-top"
+            src="/assets/images/{{ traject.tile }}"
+            alt="Traject image"
+          />
           <div class="card-body">
             <h5 class="card-title">{{ traject.name }}</h5>
             <p class="card-text">{{ traject.summary }}</p>
-            <a href="{{ traject.url }}" class="btn btn-primary btn-sm">Bekijk traject</a>
+            <a href="{{ traject.url }}" class="btn btn-primary btn-sm"
+              >Bekijk traject</a
+            >
           </div>
         </div>
       </div>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h2>Cases</h2>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      {% for case in site.cases %}
+      <div class="col-sm-4 card-group">
+        <div class="card traject-card shadow">
+          <img
+            class="card-img-top"
+            src="/assets/images/{{ case.tile }}"
+            alt="Case image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ case.name }}</h5>
+            <p class="card-text">{{ case.summary }}</p>
+            <a href="{{ case.url }}" class="btn btn-primary btn-sm"
+              >Bekijk case</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="vervolgonderzoek" class="alternate">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h2>ONO digitaal</h2>
+        <p>...</p>
+        <hr />
+      </div>
     </div>
   </div>
 </section>
@@ -65,7 +139,12 @@ navigation:
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
         <h2>Workshops & opleidingen</h2>
-        <hr>
+        <p>
+          Een opleiding of workshop helemaal op maat van jouw team / klas? Dat
+          kan!<br />Neem gerust vrijblijvend contact met ons op voor meer
+          informatie.
+        </p>
+        <hr />
       </div>
     </div>
   </div>
@@ -75,10 +154,15 @@ navigation:
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-          <h2>Contact</h2>
-          <p>Voor meer informatie over de ontwerptool ONO kunt u contact opnemen met:</p>
-        <a href="mailto:annelies.depaepe@howest.be">annelies.depaepe@howest.be<br></a>
-          <a href="mailto:kelly.schedin@howest.be">kelly.schedin@howest.be</a>
+        <h2>Contact</h2>
+        <p>
+          Voor meer informatie over de ontwerptool ONO kunt u contact opnemen
+          met:
+        </p>
+        <a href="mailto:annelies.depaepe@howest.be"
+          >annelies.depaepe@howest.be<br
+        /></a>
+        <a href="mailto:kelly.schedin@howest.be">kelly.schedin@howest.be</a>
       </div>
     </div>
   </div>
