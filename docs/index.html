@@ -6,12 +6,10 @@ navigation:
     title: Over
   - id: projecten
     title: Voorbeeldprojecten
-  - id: cases
-    title: Cases
-  - id: vervolgonderzoek
-    title: ONO digitaal
   - id: workshops
     title: Workshops & opleidingen
+  - id: vervolgonderzoek
+    title: ONO digitaal
   - id: contact
     title: Contact
 ---
@@ -34,8 +32,8 @@ navigation:
 <section id="about" class="alternate">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <h2>Over</h2>
+      <div class="col-lg-30 offset-lg-2 ">
+        <h2></h2>
         <p class="lead">
           ONO, kort voor ‘Onderzoek en Ontwerp’, is een tool ontwikkeld binnen
           een onderzoeksproject van het Industrial Design Center én de
@@ -81,7 +79,7 @@ navigation:
             <h5 class="card-title">{{ traject.name }}</h5>
             <p class="card-text">{{ traject.summary }}</p>
             <a href="{{ traject.url }}" class="btn btn-primary btn-sm"
-              >Bekijk traject</a
+              >Bekijk project</a
             >
           </div>
         </div>
@@ -91,11 +89,11 @@ navigation:
   </div>
 </section>
 
-<section id="cases">
+<section id="workshops">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
-        <h2>Cases</h2>
+        <h2>Workshops & opleidingen</h2>
         <hr />
       </div>
     </div>
@@ -119,6 +117,14 @@ navigation:
       </div>
       {% endfor %}
     </div>
+    <div class="row text-center mt-4">
+      <div class="col">
+        <p>
+          Een opleiding of workshop helemaal op maat van jouw (leerkrachten)team? Dat
+          kan!<br />Neem gerust vrijblijvend contact met ons op voor meer informatie.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -134,21 +140,6 @@ navigation:
   </div>
 </section>
 
-<section id="workshops" class="alternate">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2 text-center">
-        <h2>Workshops & opleidingen</h2>
-        <p>
-          Een opleiding of workshop helemaal op maat van jouw (leerkrachten)team? Dat
-          kan!<br />Neem gerust vrijblijvend contact met ons op voor meer
-          informatie.
-        </p>
-        <hr />
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="contact" class="bg-dark text-light">
   <div class="container">
