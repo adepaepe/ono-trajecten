@@ -6,8 +6,14 @@
   left: 0;
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0;
+}
+
 .navbar.fixed-top {
-  background-color: rgba(34, 34, 34, .7);
+  background-color: rgba(34, 34, 34, 1);
   border-bottom: rgba(255, 255, 255, .6) 1px solid;
   transition: all .35s;
   color: rgba(255, 255, 255, .7);
@@ -15,7 +21,13 @@
 
 @media (min-width: 992px) {
   .navbar.fixed-top {
-    background-color: rgba(34, 34, 34, .3);
+    background-color: rgba(34, 34, 34, .5);
+
+    .nav-item > .nav-link {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
 
     &.solid {
       background-color: #ffffff;
@@ -30,7 +42,18 @@
       }
 
       .nav-item > .nav-link.active {
+        position: relative;
         color: $primary-color;
+
+        &::after {
+          display: inline-block;
+          position: absolute;
+          content: '';
+          left: 0;
+          right: 0;
+          top: 2.75rem;
+          border-bottom: solid $primary-color 2px;
+        }
       }
     }
   }

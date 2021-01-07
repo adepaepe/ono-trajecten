@@ -2,6 +2,8 @@
 layout: default
 title: Home
 navigation:
+  - id: home
+    title: Home
   - id: about
     title: Over
   - id: toolbox
@@ -19,16 +21,15 @@ navigation:
 <header id="home" class="home">
   <div class="header-content">
     <div class="header-content-inner">
-      <h1>ONO</h1>
-      <hr />
-      <p>kort voor 'onderzoek & ontwerp'</p>
-      <p>
-        <a class="btn btn-primary btn-xl page-scroll" href="#about"
-          >Meer weten</a
-        >
-      </p>
+      <img class="header-content__logo" src="assets/images/logos/ono.svg">
     </div>
   </div>
+
+  <a class="btn home__more-button page-scroll" href="#about">
+    <svg viewBox="0 0 24 24" focusable="false">
+      <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"></path>
+    </svg>
+  </a>
 </header>
 
 <section id="about" class="alternate">

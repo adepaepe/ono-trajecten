@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand" href="/">ONO</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
             {% assign url = "#" | append: item.id %}
           {% endif %}
           <li class="nav-item">
-            <a class="nav-link page-scroll" href="{{ url }}">{{ item.title }}</a>
+            <a class="nav-link" href="{{ url }}">{{ item.title }}</a>
           </li>
         {% endfor %}
       </ul>
