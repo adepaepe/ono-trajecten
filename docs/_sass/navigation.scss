@@ -10,6 +10,11 @@
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0;
+  
+  svg {
+    height: 1.75rem;
+    fill: #ffffff;
+  }
 }
 
 .navbar.fixed-top {
@@ -35,6 +40,10 @@
   
       .navbar-brand {
         color: $primary-color;
+          
+        svg {
+          fill: $primary-color;
+        }
       }
   
       .nav-item > .nav-link {
