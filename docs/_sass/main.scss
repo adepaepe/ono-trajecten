@@ -139,8 +139,10 @@ footer {
   }
 }
 
-#aanpak {
-  ul > li {
-    margin-bottom: .5rem;
-  }
+ul > li {
+  margin-bottom: .5rem;
+}
+
+nav ul > li {
+  margin-bottom: 0;
 }
