@@ -116,14 +116,10 @@ ono:
       media: Verslag
       goal: Beargumenteren van keuzes bij het oplossen van problemen.
 ---
-<header class="traject">
-  <div class="header-content container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1>Save The Ice Cube</h1>
-        <div class="subtitle">Industrial Design Center, gebaseerd op de opdracht 'De sneeuwpop vh SLO''</div>
-      </div>
-    </div>
+<header class="traject__header jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Save The Ice Cube</h1>
+    <p class="lead">Industrial Design Center, gebaseerd op de opdracht 'De sneeuwpop' van het Slo.</p>
   </div>
 </header>
 
@@ -157,7 +153,7 @@ ono:
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>ONO bord</h2>
-        <hr>
+        <hr class="primary-separator" />
         {% include ono-board.html %}
     </div>
   </div>
@@ -168,7 +164,7 @@ ono:
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
         <h2>Stap per stap</h2>
-        <hr>
+        <hr class="primary-separator" />
       </div>
     </div>
     {% include ono-step-by-step.html %}

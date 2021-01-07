@@ -49,14 +49,6 @@ header {
     }
   }
 
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 1.5rem;
-  }
-
   .home__more-button {
     position: absolute;
     left: calc(50% - 2rem);
@@ -95,7 +87,7 @@ section {
   padding: 5rem 0;
 }
 
-hr {
+hr.primary-separator {
   max-width: 3.125rem;
   border-color: $primary-color;
   border-width: 3px;

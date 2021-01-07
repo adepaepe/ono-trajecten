@@ -1,21 +1,15 @@
-header {
+.traject {
+  &__header {
+    padding: 5.5rem 0 2rem 0;
+    margin-bottom: 0;
 
-  &.traject {
+    color: #ffffff;
     background-color: $primary-color;
 
-    padding: 5.5rem 0 2rem 0;
-
-    h1 {
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    & .subtitle {
-      font-size: 16px;
-      font-style: italic;
+    hr {
+      border-top: 1px solid rgba(255, 255, 255, .2);
     }
   }
-
 }
 
 #stap-per-stap > .container > .row > div > hr {
