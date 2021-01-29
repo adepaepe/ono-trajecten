@@ -138,3 +138,36 @@ ul > li {
 nav ul > li {
   margin-bottom: 0;
 }
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  margin-top: 2rem;
+
+  a {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  img {
+    height: 4rem;
+  }
+}
+
+.about {
+  &__pilars {
+    margin-top: 1rem;
+
+    &__icon {
+      text-align: center;
+      margin: 1rem 0;
+
+      img {
+        height: 8rem;
+      }
+    }
+  }
+}
