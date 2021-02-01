@@ -212,3 +212,15 @@ nav ul > li {
     font-style: none;
   }
 }
+
+.team-member-avatar {
+  width: 35%;
+
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  margin-bottom: 1rem;
+
+  border-radius: 100%;
+  border: solid 0.25rem rgba(255, 255, 255, 0.50);
+}
